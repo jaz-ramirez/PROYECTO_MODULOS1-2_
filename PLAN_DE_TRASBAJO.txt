@@ -1,0 +1,84 @@
+										PLAN DE TRABAJO PROYECTO DE MODULO 1-2
+
+NOMBRE DEL PROYECTO:
+	
+
+NOMBRE DEL EQUIPO:
+
+	
+INTEGRANTES DEL EQUIPO:
+
+
+											DIAS DE TRABAJO / HORAS DE TRABAJO
+
+REQUERIMIENTOS GENERALES
+
+I. Desarrollar un sistema mediante el cual la comunidad perteneciente a la ENP6 “Antonio Caso” pueda acceder a una biblioteca digital.
+II. El nombre de este sitio web debe ser definido por cada equipo.
+III. Los recursos que pueden incluir libros de texto, revistas, exámenes,enciclopedias, diccionarios, etcétera (de ahora en adelante llamados libros), deberán de manejarse únicamente en formato PDF.
+IV. El sistema deberá contar por lo menos con las siguientes(...)
+V. Debe haber al menos 3 tipos de usuarios: lector (alumno, profesor, técnico académico, laboratorista, etc.), bibliotecario y administrador.
+VI. Se debe contar con al menos 20 libros dentro de la base de datos que permita apreciar el funcionamiento los filtros de búsquedas y de las vistas relacionadas con los libros
+VII. Validar que solo se pueda acceder a las vistas del sistema solo si se tiene una sesión activa, y de forma recíproca, no poder acceder a las vistas inicio de sesión y registro de tener una sesión activa.
+
+CALENDARIO:
+
+	*Cada día reportar el avance logrado. 
+	*Avisar cuando hagamos commit.
+
+	JUNTAS:
+		8 DE MAYO (6:00 PM)
+
+		12 DE MAYO (4:30 - 12:00)
+
+OBJETIVOS (7-05-2021)
+	-Leer todas las especificaciones
+	-Aclarar dudas 
+	-Plan de trabajo
+		-listas de deberes
+	-Algoritmo (Bases de Datos)
+
+En el repositorio de GitHub el archivo README tendrán que describir las
+especificaciones del proyecto:
+
+	● Nombre del proyecto (adecuado)
+	● Nombre de equipo (adecuado)
+	● Nombre de los integrantes
+
+	● Guía de instalación del proyecto
+	● Guía de configuración del proyecto
+
+	● Características del proyecto
+	● Comentarios adicionales a su proyecto
+
+
+ALGORITMO Y RESOLUCION
+
+I. Desarrollar un sistema mediante el cual la comunidad perteneciente a la ENP6 “Antonio Caso” pueda acceder a una biblioteca digital.
+
+II. El nombre de este sitio web debe ser definido por cada equipo.
+
+III. Los recursos que pueden incluir libros de texto, revistas, exámenes,enciclopedias, diccionarios, etcétera (de ahora en adelante llamados libros), deberán de manejarse únicamente en formato PDF.
+	-Descargar los libros
+	-Subir los libros a una carpeta temporal
+	
+IV. El sistema deberá contar por lo menos con las siguientes vistas(...)
+	A. Una vista de inicio de sesión
+
+	B. Una vista para crear una cuenta.
+	C. Una vista donde venga un buscador de libros y una descripción del
+		programa (esta debe ser la página de inicio)
+	D. Una vista en la que se muestren los resultados de la búsqueda
+	E. Una vista en la que se describan los datos del libro y se den las
+		opciones de agregarlo a la lista de favoritos, abrirlo en otra pestaña y
+		descargar el archivo.
+	F. Una vista donde puedan observar fácilmente sus libros favoritos, y
+		venga el enlace para acceder a él
+	G. Una vista donde se pueda solicitar añadir nuevos recursos a la
+		biblioteca digital (para los usuarios con esta capacidad)
+	H. Una vista para poder reportar el contenido de los libros
+	I. Una vista donde vengan los datos personales del usuario y la
+		posibilidad de eliminar su cuenta.
+V. Debe haber al menos 3 tipos de usuarios: lector (alumno, profesor, técnico académico, laboratorista, etc.), bibliotecario y administrador.
+VI. Se debe contar con al menos 20 libros dentro de la base de datos que permita apreciar el funcionamiento los filtros de búsquedas y de las vistas relacionadas con los libros
+VII. Validar que solo se pueda acceder a las vistas del sistema solo si se tiene una sesión activa, y de forma recíproca, no poder acceder a las vistas inicio de sesión y registro de tener una sesión activa.
