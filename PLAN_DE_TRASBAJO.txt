@@ -1,25 +1,23 @@
-										PLAN DE TRABAJO PROYECTO DE MODULO 1-2
+Yo w										PLAN DE TRABAJO PROYECTO DE MODULO 1-2
 
-NOMBRE DEL PROYECTO:
+NOMBRE DEL PROYECTO: 
+	Propuestas:
+		Coyo biblioteca
+			Sapere Aude
+
+		Liber Distantis
+			Sapere Aude
 	
-
-NOMBRE DEL EQUIPO:
-
+NOMBRE DEL EQUIPO: Equipo 2
 	
 INTEGRANTES DEL EQUIPO:
+	Jean Blanchet
+	Karla Ramirez
+	Luna Acosta 
+	Sergio Navarro	
 
 
 											DIAS DE TRABAJO / HORAS DE TRABAJO
-
-REQUERIMIENTOS GENERALES
-
-I. Desarrollar un sistema mediante el cual la comunidad perteneciente a la ENP6 “Antonio Caso” pueda acceder a una biblioteca digital.
-II. El nombre de este sitio web debe ser definido por cada equipo.
-III. Los recursos que pueden incluir libros de texto, revistas, exámenes,enciclopedias, diccionarios, etcétera (de ahora en adelante llamados libros), deberán de manejarse únicamente en formato PDF.
-IV. El sistema deberá contar por lo menos con las siguientes(...)
-V. Debe haber al menos 3 tipos de usuarios: lector (alumno, profesor, técnico académico, laboratorista, etc.), bibliotecario y administrador.
-VI. Se debe contar con al menos 20 libros dentro de la base de datos que permita apreciar el funcionamiento los filtros de búsquedas y de las vistas relacionadas con los libros
-VII. Validar que solo se pueda acceder a las vistas del sistema solo si se tiene una sesión activa, y de forma recíproca, no poder acceder a las vistas inicio de sesión y registro de tener una sesión activa.
 
 CALENDARIO:
 
@@ -30,6 +28,11 @@ CALENDARIO:
 		8 DE MAYO (6:00 PM)
 
 		12 DE MAYO (4:30 - 12:00)
+DUDAS:
+	Debemos tener una sesion para poder buscar libros en la pagina?
+	Como consultar desde php las bases de datos?
+	Jean esta en el equipo?
+	
 
 OBJETIVOS (7-05-2021)
 	-Leer todas las especificaciones
@@ -37,6 +40,45 @@ OBJETIVOS (7-05-2021)
 	-Plan de trabajo
 		-listas de deberes
 	-Algoritmo (Bases de Datos)
+
+
+OBJETIVOS (8-05-2021)
+	Maquetado de los formualrios:
+
+		Formulario de reporte uso inadeucado (Sergio)
+		Formulario de iniciar sesión (Luna)
+		Formulario crear un usario (Jazmin)
+		Formulario de Busqueda de Libro (Luna)
+		Formulario para poder solicitar la adquisicion de nuevo material (Jazmin)
+		Formulario para agregar material(Jazmin)
+		Formulario para que el administrador pueda...
+			Agregar nuevos lectores o eliminarlos (Luna)
+			Aregar nuevos bibliotecariios o eliminarlos(Sergio)
+			Agregar nuevos administradores (Sergio)
+
+	La Base de Datos
+		Diagramas (Todos)
+		El diccionario (Todos)
+
+		El SQL (Terminal)
+
+	Diseño de las vistas 
+
+OBJETIVOS (9-05-2021)
+
+	Programar las vistas
+		
+		
+REQUERIMIENTOS GENERALES
+
+I. Desarrollar un sistema mediante el cual la comunidad perteneciente a la ENP6 “Antonio Caso” pueda acceder a una biblioteca digital.
+II. El nombre de este sitio web debe ser definido por cada equipo.
+III. Los recursos que pueden incluir libros de texto, revistas, exámenes,enciclopedias, diccionarios, etcétera (de ahora en adelante llamados libros), deberán de manejarse únicamente en formato PDF.
+IV. El sistema deberá contar por lo menos con las siguientes vistas(...)
+V. Debe haber al menos 3 tipos de usuarios: lector (alumno, profesor, técnico académico, laboratorista, etc.), bibliotecario y administrador.
+VI. Se debe contar con al menos 20 libros dentro de la base de datos que permita apreciar el funcionamiento los filtros de búsquedas y de las vistas relacionadas con los libros.
+VII. Validar que solo se pueda acceder a las vistas del sistema solo si se tiene una sesión activa, y de forma recíproca, no poder acceder a las vistas inicio de sesión y registro de tener una sesión activa.
+
 
 En el repositorio de GitHub el archivo README tendrán que describir las
 especificaciones del proyecto:
@@ -64,21 +106,92 @@ III. Los recursos que pueden incluir libros de texto, revistas, exámenes,encicl
 	
 IV. El sistema deberá contar por lo menos con las siguientes vistas(...)
 	A. Una vista de inicio de sesión
-
 	B. Una vista para crear una cuenta.
-	C. Una vista donde venga un buscador de libros y una descripción del
-		programa (esta debe ser la página de inicio)
+	C. Una vista donde venga un buscador de libros y una descripción del programa (esta debe ser la página de inicio)
 	D. Una vista en la que se muestren los resultados de la búsqueda
-	E. Una vista en la que se describan los datos del libro y se den las
-		opciones de agregarlo a la lista de favoritos, abrirlo en otra pestaña y
-		descargar el archivo.
-	F. Una vista donde puedan observar fácilmente sus libros favoritos, y
-		venga el enlace para acceder a él
-	G. Una vista donde se pueda solicitar añadir nuevos recursos a la
-		biblioteca digital (para los usuarios con esta capacidad)
+	E. Una vista en la que se describan los datos del libro y se den las opciones de agregarlo a la lista de favoritos, abrirlo en otra pestaña y descargar el archivo.
+	F. Una vista donde puedan observar fácilmente sus libros favoritos, y venga el enlace para acceder a él G. Una vista donde se pueda solicitar añadir nuevos recursos a la biblioteca digital (para los usuarios con esta capacidad)
 	H. Una vista para poder reportar el contenido de los libros
-	I. Una vista donde vengan los datos personales del usuario y la
-		posibilidad de eliminar su cuenta.
+	I. Una vista donde vengan los datos personales del usuario y la	posibilidad de eliminar su cuenta.
+
 V. Debe haber al menos 3 tipos de usuarios: lector (alumno, profesor, técnico académico, laboratorista, etc.), bibliotecario y administrador.
+	A. Un lector
+1. Debe ser capaz de:
+a) Crear una cuenta con su correo de la preparatoria, o el
+correo de comunidad UNAM y que se les pida: nombre
+completo, fecha de nacimiento, número de cuenta
+(alumno) o RFC (profesor, técnico académico,
+laboratorista, etc.) y una contraseña.
+b) Consultar una cantidad ilimitada de libros desde su
+navegador
+
+(1) En la vista en la que se muestren los resultados
+de la búsqueda se debe observar por cada libro
+(a) Imagen de referencia
+(b) Nombre
+(c) Id del libro
+(d) Botón para acceder a la vista detallada del
+libro
+
+(2) En la vista en la que se describen los datos del
+libro debe contener:
+(a) Imagen de referencia
+(b) Nombre del libro
+(c) Id del libro
+(d) Botón para visualizarlo en otra pestaña
+(e) Botón para descargar
+(f) Botón para agregar a favoritos
+(g) Autor (solo el autor principal)
+(h) Géneros
+(i) Año de publicación
+(j) Editorial
+(k) Descripción
+(3) Se debe poder buscar los libros por los filtros de:
+(a) Categorías
+(b) Año de publicación
+(c) Editorial
+(d) Autor
+c) Abrir el libro en otra pestaña
+d) Descargar el libro
+e) Añadir el libro a su lista de favoritos
+(1) En la vista donde se visualizan los libros favoritos
+se debe observar por cada libro
+(a) Imagen de referencia
+(b) Nombre
+(c) Id del libro
+2
+(d) Botón para eliminarlo de favorito
+(e) Botón para acceder a la vista detallada del
+libro
+f) Rellenar un formulario para solicitar la adquisición de
+nuevo material en donde se guardarán
+(a) Los datos del solicitante (id del usuario,
+nombre completo) se deben rellenar en
+automático
+(b) Los datos de la obra (título, autor principal,
+año, edición, editorial)
+(c) Las razones por las que la obra sería una
+adición significativa a la biblioteca
+g) Reportar el contenido del libro como inadecuado por
+(1) Contener material para personas mayores de 18
+años, que se define como el material que
+(a) Describa escenas de violencia que pueda
+dañar la sensibilidad del lector
+(b) Describa escenas con contenido sexual
+explícito
+(2) Contener discurso de odio
+(3) Difundir desinformación
+(4) Incitar a acciones que atenten contra la integridad
+de una persona o grupo de ellas
+h) Eliminar su cuenta y con ello todo registro que se tenga
+almacenado de él en la base de datos.
+2. No puede
+a) tener dos cuentas creadas al mismo tiempo
+b) acceder a contenido para adultos en caso de ser menor
+de edad
+c) acceder a las vistas de bibliotecario ni a las de
+administrador
 VI. Se debe contar con al menos 20 libros dentro de la base de datos que permita apreciar el funcionamiento los filtros de búsquedas y de las vistas relacionadas con los libros
 VII. Validar que solo se pueda acceder a las vistas del sistema solo si se tiene una sesión activa, y de forma recíproca, no poder acceder a las vistas inicio de sesión y registro de tener una sesión activa.
+
+
