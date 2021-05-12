@@ -1,6 +1,8 @@
 <?php
     include("./Config.php");
     $conbase= connectdb();
+
+    
     $email= (isset($_POST ["correo"])&& $_POST["correo"] !="") ?$_POST["correo"]: 0;
     $password= (isset($_POST ["password"])&& $_POST["password"] !="") ?$_POST["password"]: 0;
 
@@ -11,7 +13,6 @@
             </tbody>
     </table>';
     
-
     echo '<form action="" method="POST" align="center">
    
         <legend style="color:darkturquoise"><h2><i>Búsqueda</i></h2></legend>
@@ -56,8 +57,7 @@
         <input type="submit" value="Buscar" style="background-color:aquamarine">
         <input type="reset" value="Cancelar" style="background-color:aquamarine">
 </form>';
-
-
+            if ()
    
 
 ?>
