@@ -9,10 +9,7 @@
         if(!$conexion){
             mysqli_connect_error();
             mysqli_connect_errno();
-
         }
         return $conexion;
     }
-
-
 ?>
