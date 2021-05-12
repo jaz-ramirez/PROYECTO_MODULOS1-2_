@@ -24,9 +24,9 @@ CALENDARIO:
 	JUNTA:
 		12 DE MAYO (4:30 - 12:00)
 DUDAS:
-	Debemos tener una sesion para poder buscar libros en la pagina?
-	Como consultar desde php las bases de datos?
-	Jean esta en el equipo?
+	Debemos tener una sesion para poder buscar libros en la pagina? --> Si
+	Como consultar desde php las bases de datos --> Ya
+	Jean esta en el equipo???
 	
 
 OBJETIVOS (7-05-2021)
