@@ -76,17 +76,12 @@
                 </form>
             </td>
         </tr>
-        <!-- Añadir o eliminar lectores -->
+        <!-- Añadir Lectores -->
         <tr>
             <td>
                 <form action="" method="POST">
                     <fieldset>
-                        <legend style="color:darkturquoise"><h2><i>Añadir o eliminar lectores</i></h2></legend>
-                        <select name="accion">
-                            <option value="1">Añadir</option>
-                            <option value="0">Eliminar</option>
-                        </select>
-                        <hr>
+                        <legend style="color:darkturquoise"><h2><i>Añadir Lectores</i></h2></legend>
                         <label for="correo">Correo: 
                             <input type="email" name="correo">
                         </label>
@@ -99,7 +94,7 @@
                             <input type="date" name="fecha_nacim" min="1930-01-01">
                         </label>
                         <br><br>
-                        <label for="identificacion">RFC o número de cuenta: 
+                        <label for="identificacion">No. de cuenta o RFC: 
                             <input type="text" name="identificacion" minlength="9" maxlength="15">
                         </label>
                         <br><br>
@@ -107,7 +102,30 @@
                             <input type="password" name="contraseña">
                         </label>
                         <br><br>
-                        <input type="submit" value="Realizar" style="background-color:aquamarine">
+                        <input type="submit" value="Añadir" style="background-color:aquamarine">
+                        <input type="reset" value="Cancelar" style="background-color:aquamarine">
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+        <!-- Eliminar lectores -->
+        <tr>
+            <td>
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend style="color:darkturquoise"><h2><i>Eliminar Lectores</i></h2></legend>
+                        <i>Datos de la cuenta que quieres eliminar</i><br>
+                        <hr>
+                        <br>
+                        <label for="name">Nombre completo: 
+                            <input type="text" name="name">
+                        </label>
+                        <br><br>
+                        <label for="identificacion">No. de cuenta o RFC:
+                            <input type="text" name="identificacion" minlength="9" maxlength="15">
+                        </label>
+                        <br><br>
+                        <input type="submit" value="Eliminar" style="background-color:aquamarine">
                         <input type="reset" value="Cancelar" style="background-color:aquamarine">
                     </fieldset>
                 </form>
