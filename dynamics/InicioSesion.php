@@ -17,7 +17,13 @@
             </label>
             <br><br>
             <input type="submit" value="Acceder" style="background-color:aquamarine">
-    </form>';
-    
-
+    </form>
+    <br>
+    <hr>
+    ¿No tienes una cuenta?
+    <legend style="color:darkturquoise"><h2><i>¡¡Registrate!!</i></h2></legend>
+    <form action="CrearUser.php" method="post">
+        <input type="submit" name= "Crear" value="Crear Cuenta" style="background-color:aquamarine">
+    </form>
+    ';
 ?>
