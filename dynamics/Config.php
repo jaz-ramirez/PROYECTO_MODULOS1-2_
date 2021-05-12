@@ -1,5 +1,5 @@
 <?php
-    define("DBUSER", "root");
+    define("DBUSER","root");
     define ("DBHOST", "localhost");
     define("PASSWORD", "");
     define("DB", "biblioteca");
