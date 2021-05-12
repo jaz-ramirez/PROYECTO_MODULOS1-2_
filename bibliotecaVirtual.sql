@@ -55,7 +55,7 @@ CREATE TABLE `categoria` (
   KEY `id_area` (`id_area`),
   CONSTRAINT `categoria_ibfk_1` FOREIGN KEY (`id_genero`) REFERENCES `genero` (`id_genero`),
   CONSTRAINT `categoria_ibfk_2` FOREIGN KEY (`id_area`) REFERENCES `area` (`id_area`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
-INSERT INTO `categoria` VALUES (1,1,1),(2,2,4),(3,1,2),(4,3,4),(5,4,4),(6,5,4),(7,6,3);
+INSERT INTO `categoria` VALUES (1,1,1),(2,2,4),(3,1,2),(4,3,4),(5,4,4),(6,5,4),(7,6,3),(8,7,4),(9,8,4);
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,15 +183,15 @@ DROP TABLE IF EXISTS `librohascategoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `librohascategoria` (
-  `id_lhc` smallint(6) NOT NULL,
+  `id_lhc` smallint(6) NOT NULL AUTO_INCREMENT,
   `id_libro` smallint(6) NOT NULL,
   `id_categoria` smallint(6) NOT NULL,
   PRIMARY KEY (`id_lhc`),
-  UNIQUE KEY `id_libro` (`id_libro`),
-  UNIQUE KEY `id_categoria` (`id_categoria`),
+  KEY `id_libro` (`id_libro`),
+  KEY `id_categoria` (`id_categoria`),
   CONSTRAINT `librohascategoria_ibfk_1` FOREIGN KEY (`id_libro`) REFERENCES `libro` (`id_libro`),
   CONSTRAINT `librohascategoria_ibfk_2` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,6 +200,7 @@ CREATE TABLE `librohascategoria` (
 
 LOCK TABLES `librohascategoria` WRITE;
 /*!40000 ALTER TABLE `librohascategoria` DISABLE KEYS */;
+INSERT INTO `librohascategoria` VALUES (1,1,1),(2,2,2),(3,3,1),(4,4,3),(5,5,1),(6,6,4),(7,7,5),(8,8,1),(9,9,6),(10,10,7),(11,11,8),(12,12,9),(13,13,2),(14,14,9),(15,15,2),(16,16,3),(17,17,1),(18,18,8),(19,19,5),(20,20,3);
 /*!40000 ALTER TABLE `librohascategoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,6 +252,7 @@ CREATE TABLE `tipo` (
 
 LOCK TABLES `tipo` WRITE;
 /*!40000 ALTER TABLE `tipo` DISABLE KEYS */;
+INSERT INTO `tipo` VALUES (1,'Lector'),(2,'Bibliotecario'),(3,'Admin');
 /*!40000 ALTER TABLE `tipo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,4 +295,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-12  0:21:31
+-- Dump completed on 2021-05-12 10:37:15
