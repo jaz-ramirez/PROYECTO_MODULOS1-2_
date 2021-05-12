@@ -1,11 +1,8 @@
-Yo w										PLAN DE TRABAJO PROYECTO DE MODULO 1-2
+Yo w									PLAN DE TRABAJO PROYECTO DE MODULO 1-2
 
 NOMBRE DEL PROYECTO: 
 	Propuestas:
-		Coyo biblioteca
-			Sapere Aude
-
-		Liber Distantis
+		La magia del saber
 			Sapere Aude
 	
 NOMBRE DEL EQUIPO: Equipo 2
@@ -17,16 +14,14 @@ INTEGRANTES DEL EQUIPO:
 	Sergio Navarro	
 
 
-											DIAS DE TRABAJO / HORAS DE TRABAJO
+									DIAS DE TRABAJO / HORAS DE TRABAJO
 
 CALENDARIO:
 
 	*Cada día reportar el avance logrado. 
 	*Avisar cuando hagamos commit.
 
-	JUNTAS:
-		8 DE MAYO (6:00 PM)
-
+	JUNTA:
 		12 DE MAYO (4:30 - 12:00)
 DUDAS:
 	Debemos tener una sesion para poder buscar libros en la pagina?
@@ -35,32 +30,32 @@ DUDAS:
 	
 
 OBJETIVOS (7-05-2021)
-	-Leer todas las especificaciones
-	-Aclarar dudas 
+	X-Leer todas las especificaciones
+	X-Aclarar dudas 
 	-Plan de trabajo
 		-listas de deberes
-	-Algoritmo (Bases de Datos)
+	X-Algoritmo (Bases de Datos)
 
 
 OBJETIVOS (8-05-2021)
 	Maquetado de los formualrios:
 
-		Formulario de reporte uso inadeucado (Sergio)
-		Formulario de iniciar sesión (Luna)
-		Formulario crear un usario (Jazmin)
-		Formulario de Busqueda de Libro (Luna)
-		Formulario para poder solicitar la adquisicion de nuevo material (Jazmin)
-		Formulario para agregar material(Jazmin)
-		Formulario para que el administrador pueda...
-			Agregar nuevos lectores o eliminarlos (Luna)
+		X-Formulario de reporte uso inadeucado (Sergio)
+		X-Formulario de iniciar sesión (Luna)
+		X-Formulario crear un usario (Jazmin)
+		X-Formulario de Busqueda de Libro (Luna)
+		X-Formulario para poder solicitar la adquisicion de nuevo material (Jazmin)
+		X-Formulario para agregar material(Jazmin)
+		Modificarformulario para que el administrador pueda...
+			Agregar nuevos lectores o eliminarlos (Sergio)
 			Aregar nuevos bibliotecariios o eliminarlos(Sergio)
 			Agregar nuevos administradores (Sergio)
 
 	La Base de Datos
-		Diagramas (Todos)
-		El diccionario (Todos)
+		X-Diagramas (Todos)
+		X-El diccionario (Todos)
 
-		El SQL (Terminal)
+		X-El SQL (Terminal)
 
 	Diseño de las vistas 
 
