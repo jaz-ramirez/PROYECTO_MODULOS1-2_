@@ -1,9 +1,8 @@
 <?php
     session_start();
-    //si ya hay sesión para no volver a contestar el formulario
-    if(isset ($_SESSION["name"])){
-        header("location: ./index.php");
-    }
+    /*if(isset ($_SESSION["sesionact"])){
+        header("location: ./SesionActiva.php");
+    }*/
     echo '<h1 text-aling="center">LA MAGIA DEL SABER</h1>';
     echo '<h1 text-aling="center">Sapere Aude</h1>';
     echo '<form action="" method="POST" aling="center">
