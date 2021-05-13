@@ -12,6 +12,5 @@
     ';
     include("./Config.php");
     $conexion= connectdb();
-    
 
 ?>
