@@ -47,30 +47,7 @@
                 </label>
             </form>';
             </td>
-            <td>
-                <form>
-                        <legend style="color:#00a2ff" ><i><h2>Reportar contenido inadecuado</h2></i></legend>
-                        <i>Consideras que la obra...</i><br><br>
-                            <label for="Cont18">¿Describe escenas de violencia que pueda dañar la sensibilidad del lector?
-                                <br><input type="radio" name="Cont18" required>Si</label>
-                                <input type="radio" name="Cont18" required>No</label><br><br>
-                            <label for = "Cont18">¿Describe escenas con contenido sexual explícito?
-                                <br><input type="radio" name="Cont18" required>Si</label>
-                                <input type="radio" name="Cont18" required>No</label><br><br>
-                            <label for="DiscOdio">¿Contiene un discuros de odio?
-                                <br><input type="radio" name="DiscOdio" required>Si</label>
-                                <input type="radio" name="DiscOdio" required>No</label><br><br>
-                            <label for="Difdesinf">¿Difunde la desinformación?
-                                <br><input type="radio" name="Difdesinf" required>Si</label>
-                                <input type="radio" name="Difdesinf" required>No</label><br><br>
-                            <label for ="AtentPers">¿Incita a acciones que atenten contra la integridad de una persona o grupo de ellas?
-                                <br><input type="radio" name="AtentPers" required>Si</label>
-                                <input type="radio" name="AtentPers" required>No</label><br><br>
-                                <label for = "Aceptar">
-                                    <input type="submit" name="Aceptar" >
-                                </label>   
-                </form>
-            </td>
+           
         </tr>
 
         <tr>
@@ -91,7 +68,7 @@
                         </label>
                         <br><br>
                         <label for="id">No. de cuenta o RFC: 
-                            <input type="text" name="id" minlength="9" maxlength="15">
+                            <input type="number" name="id" minlength="9" maxlength="15">
                         </label>
                         <br><br>
                         <label for="contraseña">Contraseña: 
@@ -100,7 +77,7 @@
                         <label for="maslector">
                             <input type="hidden" name="maslector"value="maslector">
                         </label>
-                        <br><br>
+                        
                         <input type="submit" value="Añadir" style="background-color:aquamarine">
                         <input type="reset" value="Cancelar" style="background-color:aquamarine">
                 
@@ -119,7 +96,7 @@
                         </label>
                         <br><br>
                         <label for="id">No. de cuenta o RFC:
-                            <input type="text" name="id" minlength="9" maxlength="15">
+                            <input type="number" name="id" minlength="9" maxlength="15">
                         </label>
                         <br><br>
                         <label for="menoslector">
@@ -155,7 +132,10 @@
                                 <input type="hidden" name="masbiblio"value="masbiblio">
                             </label>
                             <label for = "Aceptar">
-                                <input type="submit" name="Aceptar" value="Añadir">
+                                <input type="submit" name="Aceptar" >
+                            </label>
+                            <label for = "Cancelar" >
+                                <input type="reset" value="Cancelar"  style="background-color:aquamarine">
                             </label>
               
                 </form>
@@ -175,13 +155,14 @@
                             </label>
                             <label for = "Aceptar">
                                 <input type="submit" name="Aceptar" value="Eliminar">
+                                <input type="reset" value="Cancelar"  style="background-color:aquamarine">
                             </label>    
                 </form>
             </td>
         </tr>
         <tr>
-            <td>
-                <form>
+            <td><br><br><br>
+                <form action="../dynamics/Administrador.php" method="POST" >
                         <legend style="color:#00a2ff"><i><h2>Añadir administradores</h2></i></legend>
                             <label for="correo">Correo: 
                                 <input type="email" name="correo" required required placeholder="Correo UNAM">
@@ -190,7 +171,7 @@
                                 <input type="text" name="name"required>
                             </label><br><br>
                             <label for="birth">Fecha de nacimiento: 
-                                <input type="date" name="brith"required>
+                                <input type="date" name="birth"required>
                             </label><br><br>
                             <label for ="id">No. de cuenta o RFC:
                                 <input type="number" name="id"required>
@@ -203,11 +184,12 @@
                             </label>
                             <label for = "Aceptar">
                                 <input type="submit" name="Aceptar" value = "Añadir">
+                                <input type="reset" value="Cancelar"  style="background-color:aquamarine">
                             </label>    
                 </form>
             </td>
             <td>
-                <form>
+                <form action="../dynamics/Administrador.php" method="POST">
                         <legend style="color:#00a2ff"><i><h2>Eliminar administradores</h2></i></legend>
                         <i>Datos de la cuenta que quieres eliminar</i><br><br>
                             <label for="name">Nombre completo: 
@@ -220,7 +202,8 @@
                                 <input type="hidden" name="menosadmin"value="menosadmin">
                             </label>
                             <label for = "Aceptar">
-                                <input type="submit" name="Aceptar" value = "Eliminar">
+                                <input type="submit" name="Aceptar" value = "Eliminar" style="background-color:aquamarine">
+                                <input type="reset" value="Cancelar"  style="background-color:aquamarine">
                             </label>
                 </form>
             </td>
