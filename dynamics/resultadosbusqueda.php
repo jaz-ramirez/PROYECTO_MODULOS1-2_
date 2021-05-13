@@ -244,7 +244,7 @@
         echo "<br><br>";
         $libro="SELECT * FROM Libro 
                 INNER JOIN Editorial ON Libro.id_editorial=Editorial.id_editorial
-                WHERE Editorial IN('$editorial')";
+                WHERE Editorial LIKE '%$editorial%'";
         $query=mysqli_query($con,$libro);
         while($row=mysqli_fetch_array($query))
         {
@@ -272,7 +272,7 @@
     {
         echo "<h2>Autor de busqueda: </h2>".$autor;
         echo "<br><br>";
-        $query=mysqli_query($con,"SELECT * FROM Libro WHERE Autor='$autor'");
+        $query=mysqli_query($con,"SELECT * FROM Libro WHERE Autor LIKE '%$autor%'");
         while($row=mysqli_fetch_array($query))
         {
             echo "<table>
