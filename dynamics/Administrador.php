@@ -22,6 +22,7 @@
    
     $correounam = explode ("@", $email);
     echo $email;
+    var_dump ($correounam);
     $carpetabiblio= "../statics/";
     if($book!=0)
     {
@@ -50,10 +51,11 @@
     
     else if ($maslector!==0)
     {
-        if($correounam[1]==".comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
+        if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
         {
             $addlector="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) 
-                                    VALUES ('$id',1, '$name', '$birth', '$email', '$password')";
+                                VALUES ('$id',1, '$name', '$birth', '$email', '$password')";
+            echo $addlector;
             $query=mysqli_query($conect, $addlector);
             if($query)
             {
@@ -62,7 +64,7 @@
             else{
                 echo "No se pudo registrar correctamente";
             }
-            echo "<br>dos";  
+             
         }
         echo "<br>dos"; 
     }
