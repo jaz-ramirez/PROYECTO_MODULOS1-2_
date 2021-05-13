@@ -1,7 +1,7 @@
 <?php
     if(isset ($_POST["Crear"]))
     {
-        echo '<form action="CrearUser.php" method="POST" aling="center">
+        echo '<form action="logUser.php" method="post" align="center">
         <fieldset>
             <legend style="color:#00a2ff"><i><h2>Crea nuevo usuario</h2></i></legend>
                 <label for = "correo">Correo:
@@ -20,13 +20,9 @@
                     <input type="password" name="contraseña"required >
                 </label><br><br>
                 <label for = "Crear Usuario">
-                    <input type="submit" name="Crear Usuario" >
+                    <input type="submit" name="Nuser" value= "Crear Usuario">
                 </label>
             </fieldset>    
         </form>';
-        if(isset($_POST["Crear Usuario"]))
-        {
-            header("location: ./InicioSesion.php");
-        }
     }
 ?>
