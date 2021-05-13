@@ -7,15 +7,30 @@
     $editorial = (isset($_POST["editorial"]) && $_POST["editorial"] != "" )?$_POST["editorial"] : "No hay editorial";
     $autor = (isset($_POST["autor"]) && $_POST["autor"] != "" )?$_POST["autor"] : "No hay autor";
 //======================================================================================//
-    //se conecta con la base de datos
     $con=connectdb();
-    //verifica si se envio algo desde el texto de la barra de busqueda
+    //$libro="SELECT * FROM Libro WHERE Titulo='La casa hechizada'";
+    /*$libro="SELECT * FROM Libro";
+    $query=mysqli_query($con,$libro);
+    while($row=mysqli_fetch_array($query))
+    {
+        echo "<table>
+                <tr>
+                    <td>";
+                        echo '<img src="https://img.icons8.com/ios/452/book.png" alt="Default libro" width="100px">';
+                        echo '<ul>';
+                            echo "<li>Titulo: ".$row[3];
+                            echo "</li>";
+                            echo "<li>ID: ".$row[0];
+                            echo "</li>";
+                        echo '</ul>';
+        echo       "</td>
+                </tr>
+        </table>";
+    }*/
     if($texto!="No hay texto")
     {
-        //si hay algo imprime el texto como valor de busqueda
         echo "Texto de busqueda: ".$texto;
         echo "<br><br>";
-        //si se trata de numeros buscara el ID del libro
         if($texto>=1)
         {
             $query=mysqli_query($con,"SELECT * FROM Libro WHERE id_libro LIKE '%$texto%'");
@@ -42,9 +57,7 @@
                 echo '<input type="number" name="ID" required><br><br>';
                 echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
             </form>';
-        }
-        //si no se trata de numeros buscara titulo
-        else{
+        }else{
             $query=mysqli_query($con,"SELECT * FROM Libro WHERE Titulo LIKE '%$texto%'");
             while($row=mysqli_fetch_array($query))
             {
@@ -63,7 +76,6 @@
                 </table>";
             }
         }
-        //en un hidden envia el ID para encontrar la informacion de más información
         echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
         echo'
         <form action="./datos.php" method="POST">
@@ -72,7 +84,6 @@
             echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
         </form>';
     }
-    //si el area es mayor o igual a uno iniciara una nueva busqueda por area, existen casos por area 1-4
     if($area>=1)
     {
         echo "<h2>Area de busqueda: </h2>".$area;
@@ -202,12 +213,10 @@
             echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
         </form>';
     }
-    //si encuentra datos enviado en año iniciara una nueva busqueda por año
     if($año!="No hay año")
     {
         echo "<h2>Año de busqueda: </h2>".$año;
         echo "<br><br>";
-        //con este ciclo voy incrementando el año hasta llegar a 3000 y checo si existe ese año o no para imprimir la informacion básica del libro
         $año_maximo=0000;
         while($año_maximo<=3000)
         {
@@ -243,7 +252,6 @@
             echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
         </form>';
     }
-    //checo si hay editorial para crear nueva busqueda por editorial
     if($editorial!="No hay editorial")
     {
         echo "Editorial de busqueda: ".$editorial;
@@ -276,7 +284,6 @@
             echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
         </form>';
     }
-    //checo si hay autor para crear una nueva busqueda por autor
     if($autor!="No hay autor")
     {
         echo "<h2>Autor de busqueda: </h2>".$autor;
@@ -306,9 +313,13 @@
             echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
         </form>';
     }
-    //si no se envia informacion se imprime el siguiente mensaje
     if($texto=="No hay texto"&&$año=="No hay año"&&$editorial=="No hay editorial"&&$autor=="No hay autor"&&$area==0)
     {
         echo "<h2>No hay resultados de busqueda</h2>";
     }
+    /*echo'
+    <br>
+    <form action="./SesionActiva.php" method="POST">
+        <input type="submit" value="Regresar" style="background-color:aquamarine">
+    </form>';*/
 ?>
