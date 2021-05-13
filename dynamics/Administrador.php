@@ -61,7 +61,6 @@
     echo "uno";
 
     }
-    
     else if ($maslector!==0)
     {
         if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
