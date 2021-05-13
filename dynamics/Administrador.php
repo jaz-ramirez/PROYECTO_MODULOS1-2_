@@ -20,9 +20,9 @@
     $area= (isset($_POST ["area"])&& $_POST["area"] !="") ?$_POST["area"]: 0;
     $img= (isset($_POST ["img"])&& $_POST["img"] !="") ?$_POST["img"]: 0;
    
-    
-
-    $carpetabiblio= "../statics/"
+    $correounam = explode ("@", $email);
+    if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
+    $carpetabiblio= "../statics/";
     if($book!=0)
     {
         $nombrepdf= $_FILES['file']['name'];
@@ -31,7 +31,7 @@
         $extension= pathinfo($nombrepdf, PATHINFO_EXTENSION);
         if($extension=="pdf")
         {
-            if(file_exists($carpeta.$book.$extension==false)
+            if(file_exists($carpeta.$book.$extension==false))
             {
                 rename($archpdf, $carpeta.$book.$extension);
                 echo "<h1>El libro se cargó correctamente en la biblioteca</h1><br><br>";
