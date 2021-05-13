@@ -44,10 +44,12 @@
             echo $row["Descripcion"];
         echo "</p>";
         echo'
-        <form action="" method="">
-            <input type="submit" value="Abrir en otra pestaña" style="background-color:aquamarine">
-            <input type="submit" value="Descargar" style="background-color:aquamarine">
-            <input type="submit" value="Agregar a favoritos" style="background-color:aquamarine">
+        <form action="./archs_pdf.php" method="POST">
+            <input type="submit" name="Abrir" value="Abrir en otra pestaña" style="background-color:aquamarine">
+            <input type="submit" name="Descargar" value="Descargar" style="background-color:aquamarine">';
+            echo "<input type='hidden' name='Titulo' value='$row[6]'>";
+            echo "<input type='hidden' name='ID' value='$row[1]'>";
+            echo ' <input type="submit" name="Agregar" value="Agregar a favoritos" style="background-color:aquamarine">
         </form>';
     }
 ?>
