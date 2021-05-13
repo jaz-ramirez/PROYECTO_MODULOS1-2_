@@ -306,6 +306,13 @@
             echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
         </form>';
     }
+    echo "<h4 align='center'>¿Consideras que hay obras inadecuadas?</h4>";
+    echo '
+    <form action="ReporMat.php" method="post" align="center">
+        <input type="submit" name= "Reportar" value="Reportar Material" style="background-color:aquamarine" align="center">
+    </form>
+    ';
+    
     //si no se envia informacion se imprime el siguiente mensaje
     if($texto=="No hay texto"&&$año=="No hay año"&&$editorial=="No hay editorial"&&$autor=="No hay autor"&&$area==0)
     {
