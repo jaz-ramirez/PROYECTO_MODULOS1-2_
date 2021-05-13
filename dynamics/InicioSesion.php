@@ -1,11 +1,27 @@
 <?php
+    include("./Config.php");
+    $conexion= connectdb();
     session_start();
-    /*if(isset ($_SESSION["sesionact"])){
-        header("location: ./SesionActiva.php");
-    }*/
+    if(isset($_POST["Crear Usuario"]))
+    {
+        //Recibimos los datos del POST de
+        $correo= ($_POST["correo"]);
+        $nombre= ($_POST["nombre"]);
+        $birth = ($_POST["birth"]);
+        $id= ($_POST["id"]);
+        $contra=($_POST["contraseña"]);
+
+        //Añadir logica para añadir la informacion a la base de datos
+        $SQL_SELECT = "INSERT INTO Usuario VALUES ('$id',1,'$nombre','$birth','$correo','$contra')";
+        $SQL_Query = mysqli_query ($conexion, $SQL_SELECT);
+        $SQL_Row = mysqli_fetch_array ($SQL_Query);
+        var_dump ($SQL_Row);
+
+        //header("location: ./SesionActiva.php");
+    }
     echo '<h1 text-aling="center">LA MAGIA DEL SABER</h1>';
     echo '<h1 text-aling="center">Sapere Aude</h1>';
-    echo '<form action="" method="POST" aling="center">
+    echo '<form action="SesionActiva.php" method="POST" aling="center">
             <legend style="color:darkturquoise"><h2><i>Iniciar sesión</i></h2></legend>
             <label for="correo">Correo: 
                 <br>
@@ -17,7 +33,17 @@
             </label>
             <br><br>
             <input type="submit" value="Acceder" style="background-color:aquamarine">
-    </form>';
-    
-
+    </form>
+    <br>
+    <hr>
+    ¿No tienes una cuenta?
+    <legend style="color:darkturquoise"><h2><i>¡¡Registrate!!</i></h2></legend>
+    <form action="CrearUser.php" method="post">
+        <input type="submit" name= "Crear" value="Crear Cuenta" style="background-color:aquamarine">
+    </form>
+    ';
+    if(isset($_POST["Acceder"]))
+    {  
+        header("location: ./SesionActiva.php");
+    }
 ?>
