@@ -1,16 +1,6 @@
 <?php
 echo 
 '
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <body>
-        //Repote de uso inadecuado
     <form>
         <fieldset>
             <legend style="color:#00a2ff" ><i><h2>Reportar contenido inadecuado</h2></i></legend>
@@ -38,10 +28,14 @@ echo
 
     <br><br><br><br>
 
-//Agregar nuevos bibliotecarios
     <form>
         <fieldset>
-            <legend style="color:#00a2ff"><i><h2>Añadir bibliotecarios</h2></i></legend>
+            <legend style="color:#00a2ff"><i><h2>Añadir o eliminar bibliotecarios</h2></i></legend>
+                <i>¿Qué es lo que deseas hacer?</i><br><br>
+                <select name="Modo">
+                    <option value="ENP1">Añadir nuevos bibliotecarios</option>
+                    <option value="ENP2">Eliminar viejos bibliotecarios</option>
+                </select><br><br>
                 <label for="correo">Correo: 
                     <input type="email" name="correo" required required placeholder="Correo UNAM">
                 </label><br><br>
@@ -58,36 +52,21 @@ echo
                     <input type="password" name="contraseña"required>
                 </label><br><br>
                 <label for = "Aceptar">
-                    <input type="submit" name="Aceptar" value="Añadir">
+                    <input type="submit" name="Aceptar" >
                 </label>
         </fieldset>    
     </form>
 
     <br><br><br><br>
 
-    //Eliminar bibliotecarios
     <form>
         <fieldset>
-            <legend style="color:#00a2ff"><i><h2>Eliminar bibliotecarios</h2></i></legend>
-            <i>Datos de la cuenta que quieres eliminar</i><br><br>
-                <label for="nombre">Nombre completo: 
-                    <input type="text" name="nombre"required>
-                </label><br><br>
-                <label for ="id">No. de cuenta o RFC:
-                    <input type="number" name="id"required>
-                </label><br><br>
-                <label for = "Aceptar">
-                    <input type="submit" name="Aceptar" value="Eliminar">
-                </label>
-        </fieldset>    
-    </form>
-
-    <br><br><br><br>
-
-//Agregar nuevos administradores
-    <form>
-        <fieldset>
-            <legend style="color:#00a2ff"><i><h2>Añadir administradores</h2></i></legend>
+            <legend style="color:#00a2ff"><i><h2>Añadir o eliminar administradores</h2></i></legend>
+                <i>¿Qué es lo que deseas hacer?</i><br><br>
+                <select name="Modo">
+                    <option value="ENP1">Añadir nuevos administradores</option>
+                    <option value="ENP2">Eliminar viejos administradores</option>
+                </select><br><br>
                 <label for="correo">Correo: 
                     <input type="email" name="correo" required required placeholder="Correo UNAM">
                 </label><br><br>
@@ -104,32 +83,10 @@ echo
                     <input type="password" name="contraseña"required>
                 </label><br><br>
                 <label for = "Aceptar">
-                    <input type="submit" name="Aceptar" value = "Añadir">
+                    <input type="submit" name="Aceptar" >
                 </label>
         </fieldset>    
     </form>
-
-    <br><br><br><br>
-
-//Eliminar administradores
-    <form>
-        <fieldset>
-            <legend style="color:#00a2ff"><i><h2>Eliminar administradores</h2></i></legend>
-            <i>Datos de la cuenta que quieres eliminar</i><br><br>
-                <label for="nombre">Nombre completo: 
-                    <input type="text" name="nombre"required>
-                </label><br><br>
-                <label for ="id">No. de cuenta o RFC:
-                    <input type="number" name="id"required>
-                </label><br><br>
-                <label for = "Aceptar">
-                    <input type="submit" name="Aceptar" value = "Eliminar">
-                </label>
-        </fieldset>    
-    </form>
-<br><br>
-    </body>
-</html>
-
+    <br><br>
 ';
 ?>
