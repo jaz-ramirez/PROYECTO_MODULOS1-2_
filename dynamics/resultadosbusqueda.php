@@ -46,15 +46,17 @@
                                     echo "<li>ID: ".$row[0];
                                     echo "</li>";
                                 echo '</ul>';
-                                echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
+            echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+            echo'
+            <form action="./datos.php" method="POST">
+                <p>Para consultar más datos escribe el ID del libro: </p>';
+                echo '<input type="number" name="ID" required><br><br>';
+                echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+            </form>';
         }else{
             $query=mysqli_query($con,"SELECT * FROM Libro WHERE Titulo LIKE '%$texto%'");
             while($row=mysqli_fetch_array($query))
@@ -69,16 +71,18 @@
                                     echo "<li>ID: ".$row[0];
                                     echo "</li>";
                                 echo '</ul>';
-                                echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
         }
+        echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+        echo'
+        <form action="./datos.php" method="POST">
+            <p>Para consultar más datos escribe el ID del libro: </p>';
+            echo '<input type="number" name="ID" required><br><br>';
+            echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+        </form>';
     }
     if($area>=1)
     {
@@ -103,15 +107,17 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
-                                echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
+            echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+            echo'
+            <form action="./datos.php" method="POST">
+                <p>Para consultar más datos escribe el ID del libro: </p>';
+                echo '<input type="number" name="ID" required><br><br>';
+                echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+            </form>';
         }
         if($area==2)
         {
@@ -132,15 +138,17 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
-                                echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
+            echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+            echo'
+            <form action="./datos.php" method="POST">
+                <p>Para consultar más datos escribe el ID del libro: </p>';
+                echo '<input type="number" name="ID" required><br><br>';
+                echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+            </form>';
         }
         if($area==3)
         {
@@ -161,15 +169,17 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
-                                echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
+            echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+            echo'
+            <form action="./datos.php" method="POST">
+                <p>Para consultar más datos escribe el ID del libro: </p>';
+                echo '<input type="number" name="ID" required><br><br>';
+                echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+            </form>';
         }
         if($area==4)
         {
@@ -190,16 +200,18 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
-                                echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
         }
+        echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+        echo'
+        <form action="./datos.php" method="POST">
+            <p>Para consultar más datos escribe el ID del libro: </p>';
+            echo '<input type="number" name="ID" required><br><br>';
+            echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+        </form>';
     }
     if($año!="No hay año")
     {
@@ -225,11 +237,6 @@
                                         echo "<li>ID: ".$row[0];
                                         echo "</li>";
                                     echo '</ul>';
-                                    echo'
-                                        <br>
-                                        <form action="./SesionActiva.php" method="POST">
-                                            <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                        </form>';
                     echo       "</td>
                             </tr>
                     </table>";
@@ -237,6 +244,13 @@
             }
             $año_maximo+=1;
         }
+        echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+        echo'
+        <form action="./datos.php" method="POST">
+            <p>Para consultar más datos escribe el ID del libro: </p>';
+            echo '<input type="number" name="ID" required><br><br>';
+            echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+        </form>';
     }
     if($editorial!="No hay editorial")
     {
@@ -258,15 +272,17 @@
                                 echo "<li>ID: ".$row[0];
                                 echo "</li>";
                             echo '</ul>';
-                            echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
             echo       "</td>
                     </tr>
             </table>";
         }
+        echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+        echo'
+        <form action="./datos.php" method="POST">
+            <p>Para consultar más datos escribe el ID del libro: </p>';
+            echo '<input type="number" name="ID" required><br><br>';
+            echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+        </form>';
     }
     if($autor!="No hay autor")
     {
@@ -285,15 +301,17 @@
                                 echo "<li>ID: ".$row[0];
                                 echo "</li>";
                             echo '</ul>';
-                            echo'
-                                <br>
-                                <form action="./SesionActiva.php" method="POST">
-                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
-                                </form>';
             echo       "</td>
                     </tr>
             </table>";
         }
+        echo "<h2><i> ¿Te interesó algún libro? </i></h2>";
+        echo'
+        <form action="./datos.php" method="POST">
+            <p>Para consultar más datos escribe el ID del libro: </p>';
+            echo '<input type="number" name="ID" required><br><br>';
+            echo '<input type="submit" value="Mas información" style="background-color:aquamarine">
+        </form>';
     }
     if($texto=="No hay texto"&&$año=="No hay año"&&$editorial=="No hay editorial"&&$autor=="No hay autor"&&$area==0)
     {
