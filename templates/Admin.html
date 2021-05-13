@@ -15,8 +15,8 @@
             <form>
                 <legend style="color:#00a2ff" ><i><h2>Agregar nuevo material</h2></i></legend>
                 <h4 aling="center">Datos del libro:</h4>
-                <label for="name">Nombre del libro: 
-                    <input type="text" name="name" required>
+                <label for="book">Nombre del libro: 
+                    <input type="text" name="book" required>
                 </label><br><br>
                 <label for="autor">Autor (principal): 
                     <input type="text" name="autor"required>
@@ -33,22 +33,49 @@
                 <label for = "area">Área: 
                     <input type="text" name="area"required>
                 </label><br><br>
-                <label for = "area">Imagen: 
+                <label for = "img">Imagen: 
                     <input type="file" name="img">
                 </label><br><br>
-                <label for = "area">Archivo: 
-                    <input type="file" name="book"required>
+                <label for = "file">Archivo: 
+                    <input type="file" name="file"required>
                 </label><br><br>
                 <label for = "Enviar" >
                     <input type="submit" value="Enviar"  style="background-color:aquamarine">
                 </label>
+                <label for = "Cancelar" >
+                    <input type="submit" value="Cancelar"  style="background-color:aquamarine">
+                </label>
             </form>';
             </td>
-        <tr>
+            <td>
+                <form>
+                        <legend style="color:#00a2ff" ><i><h2>Reportar contenido inadecuado</h2></i></legend>
+                        <i>Consideras que la obra...</i><br><br>
+                            <label for="Cont18">¿Describe escenas de violencia que pueda dañar la sensibilidad del lector?
+                                <br><input type="radio" name="Cont18" required>Si</label>
+                                <input type="radio" name="Cont18" required>No</label><br><br>
+                            <label for = "Cont18">¿Describe escenas con contenido sexual explícito?
+                                <br><input type="radio" name="Cont18" required>Si</label>
+                                <input type="radio" name="Cont18" required>No</label><br><br>
+                            <label for="DiscOdio">¿Contiene un discuros de odio?
+                                <br><input type="radio" name="DiscOdio" required>Si</label>
+                                <input type="radio" name="DiscOdio" required>No</label><br><br>
+                            <label for="Difdesinf">¿Difunde la desinformación?
+                                <br><input type="radio" name="Difdesinf" required>Si</label>
+                                <input type="radio" name="Difdesinf" required>No</label><br><br>
+                            <label for ="AtentPers">¿Incita a acciones que atenten contra la integridad de una persona o grupo de ellas?
+                                <br><input type="radio" name="AtentPers" required>Si</label>
+                                <input type="radio" name="AtentPers" required>No</label><br><br>
+                                <label for = "Aceptar">
+                                    <input type="submit" name="Aceptar" >
+                                </label>   
+                </form>
+            </td>
+        </tr>
 
         <tr>
             <td>
-                <form action="" method="POST">
+                <form action="../dynamics/Administrador.php" method="POST">
                    
                         <legend style="color:darkturquoise"><h2><i>Añadir Lectores</i></h2></legend>
                         <label for="correo">Correo: 
@@ -59,26 +86,29 @@
                             <input type="text" name="name">
                         </label>
                         <br><br>
-                        <label for="fecha_nacim">Fecha de nacimiento: 
-                            <input type="date" name="fecha_nacim" min="1930-01-01">
+                        <label for="birth">Fecha de nacimiento: 
+                            <input type="date" name="birth" min="1930-01-01">
                         </label>
                         <br><br>
-                        <label for="identificacion">No. de cuenta o RFC: 
-                            <input type="text" name="identificacion" minlength="9" maxlength="15">
+                        <label for="id">No. de cuenta o RFC: 
+                            <input type="text" name="id" minlength="9" maxlength="15">
                         </label>
                         <br><br>
                         <label for="contraseña">Contraseña: 
                             <input type="password" name="contraseña">
+                        </label><br><br>
+                        <label for="maslector">
+                            <input type="hidden" name="maslector"value="maslector">
                         </label>
                         <br><br>
                         <input type="submit" value="Añadir" style="background-color:aquamarine">
                         <input type="reset" value="Cancelar" style="background-color:aquamarine">
                 
 
-                </form>
+                </form><br><br>
             </td>
             <td>
-                <form action="" method="POST">
+                <form action="../dynamics/Administrador.php" method="POST">
                 
                         <legend style="color:darkturquoise"><h2><i>Eliminar Lectores</i></h2></legend>
                         <i>Datos de la cuenta que quieres eliminar</i><br>
@@ -88,13 +118,95 @@
                             <input type="text" name="name">
                         </label>
                         <br><br>
-                        <label for="identificacion">No. de cuenta o RFC:
-                            <input type="text" name="identificacion" minlength="9" maxlength="15">
+                        <label for="id">No. de cuenta o RFC:
+                            <input type="text" name="id" minlength="9" maxlength="15">
                         </label>
                         <br><br>
                         <input type="submit" value="Eliminar" style="background-color:aquamarine">
                         <input type="reset" value="Cancelar" style="background-color:aquamarine">
                  
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="../dynamics/Administrador.php" method="POST">
+                  
+                        <legend style="color:#00a2ff"><i><h2>Añadir bibliotecarios</h2></i></legend>
+                            <label for="correo">Correo: 
+                                <input type="email" name="correo" required required placeholder="Correo UNAM">
+                            </label><br><br>
+                            <label for="name">Nombre completo: 
+                                <input type="text" name="name"required>
+                            </label><br><br>
+                            <label for="birth">Fecha de nacimiento: 
+                                <input type="date" name="birth"required>
+                            </label><br><br>
+                            <label for ="id">No. de cuenta o RFC:
+                                <input type="number" name="id"required>
+                            </label><br><br>
+                            <label for = "contraseña">Contraseña: 
+                                <input type="password" name="contraseña"required>
+                            </label><br><br>
+                            <label for = "Aceptar">
+                                <input type="submit" name="Aceptar" value="Añadir">
+                            </label>
+              
+                </form>
+            </td>
+            <td>
+                <form action="../dynamics/Administrador.php" method="POST">
+                        <legend style="color:#00a2ff"><i><h2>Eliminar bibliotecarios</h2></i></legend>
+                        <i>Datos de la cuenta que quieres eliminar</i><br><br>
+                            <label for="name">Nombre completo: 
+                                <input type="text" name="name"required>
+                            </label><br><br>
+                            <label for ="id">No. de cuenta o RFC:
+                                <input type="number" name="id"required>
+                            </label><br><br>
+                            <label for = "Aceptar">
+                                <input type="submit" name="Aceptar" value="Eliminar">
+                            </label>    
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                        <legend style="color:#00a2ff"><i><h2>Añadir administradores</h2></i></legend>
+                            <label for="correo">Correo: 
+                                <input type="email" name="correo" required required placeholder="Correo UNAM">
+                            </label><br><br>
+                            <label for="name">Nombre completo: 
+                                <input type="text" name="name"required>
+                            </label><br><br>
+                            <label for="birth">Fecha de nacimiento: 
+                                <input type="date" name="brith"required>
+                            </label><br><br>
+                            <label for ="id">No. de cuenta o RFC:
+                                <input type="number" name="id"required>
+                            </label><br><br>
+                            <label for = "genero">Contraseña: 
+                                <input type="password" name="contraseña"required>
+                            </label><br><br>
+                            <label for = "Aceptar">
+                                <input type="submit" name="Aceptar" value = "Añadir">
+                            </label>    
+                </form>
+            </td>
+            <td>
+                <form>
+                        <legend style="color:#00a2ff"><i><h2>Eliminar administradores</h2></i></legend>
+                        <i>Datos de la cuenta que quieres eliminar</i><br><br>
+                            <label for="name">Nombre completo: 
+                                <input type="text" name="name"required>
+                            </label><br><br>
+                            <label for ="id">No. de cuenta o RFC:
+                                <input type="number" name="id"required>
+                            </label><br><br>
+                            <label for = "Aceptar">
+                                <input type="submit" name="Aceptar" value = "Eliminar">
+                            </label>
                 </form>
             </td>
         </tr>
