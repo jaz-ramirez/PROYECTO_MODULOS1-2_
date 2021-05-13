@@ -18,7 +18,7 @@
                 <tr>
                 <h4 align=\'center\'>Bienvenido a <i>La magia del Saber</i> la biblioteca de la ENP 6. <br>
                 Al crear tu cuenta podrás buscar libros a través de su área, su año, su editorial y de su autor.<br>
-                Podrás descargar los libros que sean de tu agrado y también podrás agregarlos a tu lista de favoritos.<br>
+                Podrás descargar los libros que sean de tu agrado.<br>
                 Si quieres saber algo más sobre un libro podrás consultar su descripción detallada, así como poder ver su portada. 
                 <br><i>Sapere Aude</i></h4>
                 </tr>
