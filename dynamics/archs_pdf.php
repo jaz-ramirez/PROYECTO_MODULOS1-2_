@@ -13,6 +13,7 @@
                 <td>';
                     echo "<h2>Para continuar sigue las instrucciones:</h2><br><br>";
                     echo "Por favor, para abrir dale al link<br><br>";
+                    //si existe el titulo y el id imprime un vinculo que nos lleva a otra pagina donde podemos ver el libro
                     if($Titulo!="a")
                     {
                         if($ID!="a")
@@ -33,6 +34,7 @@
                 <td>';
                     echo "<h2>Para continuar sigue las instrucciones:</h2><br><br>";
                     echo "Por favor, para descargar dale al link<br><br>";
+                    //si existe el titulo y el id imprime un vinculo que nos imprime un link para descargar el libro
                     if($Titulo!="a")
                     {
                         if($ID!="a")
@@ -48,6 +50,6 @@
     }
     if($Agregar!="a")
     {
-        echo "Añade a Favs";
+        echo "Añade a Favs<br>No disponible aún";
     }
 ?>

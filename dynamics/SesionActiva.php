@@ -8,14 +8,14 @@
     $SQL_SELECT = "SELECT contraseña FROM usuario WHERE Contraseña='$password' AND Correo='$correo'";
     $SQL_Query = mysqli_query ($conexion, $SQL_SELECT);
     $SQL_Row = mysqli_fetch_array ($SQL_Query);
-    var_dump($SQL_Row);
+    //var_dump($SQL_Row);
 
     if (!empty($SQL_Row))
     {
         echo "<h1 align=\"center\">¡¡Bienvenido a la biblioteca de la ENP 6!!</h1>";
         echo '<table align="center">
                 <tbody>
-                    <td><video src="../diseño/Biblioteca.mp4" controls Loop width="600" align="center"></td>
+                    <td><video src="../statics/Biblioteca.mp4" controls Loop width="600" align="center"></td>
                 </tbody>
                 <tr>
                 <h4 align=\'center\'>Bienvenido a <i>La magia del Saber</i> la biblioteca de la ENP 6. <br>

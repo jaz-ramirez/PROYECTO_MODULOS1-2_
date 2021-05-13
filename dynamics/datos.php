@@ -5,6 +5,7 @@
     $ID = (isset($_POST["ID"]) && $_POST["ID"] != "" )?$_POST["ID"] : "No hay dato";
     //================================================================================================//
     echo '<img src="https://img.icons8.com/ios/452/book.png" alt="Default libro" width="400px" align="right"><br>';
+    //hago consulta a distintas tablas para encontrar todos los datos
     $query=mysqli_query($con,"SELECT * FROM LibroHasCategoria
         INNER JOIN Libro ON Libro.id_libro=LibroHasCategoria.id_libro
         INNER JOIN Categoria ON Categoria.id_categoria=LibroHasCategoria.id_categoria
@@ -13,6 +14,7 @@
         INNER JOIN Editorial On Editorial.id_editorial=Libro.id_editorial
         WHERE Libro.id_libro IN($ID)
     ");
+    //imprimo los datos
     while($row=mysqli_fetch_array($query))
     {
         //var_dump($row);
@@ -43,6 +45,7 @@
         echo "<p>";
             echo $row["Descripcion"];
         echo "</p>";
+        //este form nos lleva un hidden con el titulo de l a obra y el ID del libro
         echo'
         <form action="./archs_pdf.php" method="POST">
             <input type="submit" name="Abrir" value="Abrir en otra pestaña" style="background-color:aquamarine">
