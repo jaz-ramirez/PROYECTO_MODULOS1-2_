@@ -23,7 +23,7 @@
     $carpetabiblio= "../statics/";
     
 
-    }
+    
     
     if ($maslector!==0)
     {

@@ -8,6 +8,11 @@
 * Sergio Navarro
 
 ### Instalación:
+Encienda servidor Apache y MySQL
+Descargue el zip del proyecto y descomprimalo.
+Guarde la carpeta PROYECTO_MODULOS1-2_ dentro de xampp/htdocs/
+Cree una base de datos en xampp/mysql/bin con el nombre bibliotecaVirtual
+Haga SOURCE del archivo .sql de la carpeta PROYECTO_MODULOS1-2_
 
 ### Configuración:
 
