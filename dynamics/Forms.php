@@ -37,36 +37,6 @@
     
         <br><br><br>
        
-        <form>
-            <fieldset>
-                <legend style="color:#00a2ff"><i><h2>Solicitar adquisición de material</h2></i></legend><br>
-                    <label for = "iduser">Usuario
-                        <input type="number" name="iduser"required placeholder="Introduzca su ID">
-                    </label><br>
-                    <i>Datos de la obra</i><br>
-                    <label for="name">Nombre del libro: 
-                        <input type="text" name="name" required>
-                    </label><br><br>
-                    <label for="autor">Autor (principal): 
-                        <input type="text" name="autor"required>
-                    </label><br><br>
-                    <label for="editorial">Editorial: 
-                        <input type="text" name="editorial"required>
-                    </label><br><br>
-                    <label for ="año">Año de publicación:
-                        <input type="number" name="año"required>
-                    </label><br><br>
-                    <label for = "genero">Géneros: 
-                        <input type="text" name="genero"required>
-                    </label><br><br>
-                    <label for = "razones">Razones:
-                        <input type="text" name="razones"required placeholder="¿Por qué la obra es significativa para la biblioteca?">
-                    </label><br><br>
-                    <label for = "Enviar">
-                        <input type="submit" name="Enviar" >
-                    </label>
-                </fieldset>    
-            
-        </form>';
+        
         echo "<br><br>";
 ?>
