@@ -33,7 +33,7 @@
         echo "<br><br>";
         if($texto>=1)
         {
-            $query=mysqli_query($con,"SELECT * FROM Libro WHERE id_libro=$texto");
+            $query=mysqli_query($con,"SELECT * FROM Libro WHERE id_libro LIKE '%$texto%'");
             while($row=mysqli_fetch_array($query))
             {
                 echo "<table>
@@ -46,12 +46,17 @@
                                     echo "<li>ID: ".$row[0];
                                     echo "</li>";
                                 echo '</ul>';
+                                echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
             }
         }else{
-            $query=mysqli_query($con,"SELECT * FROM Libro WHERE Titulo='$texto'");
+            $query=mysqli_query($con,"SELECT * FROM Libro WHERE Titulo LIKE '%$texto%'");
             while($row=mysqli_fetch_array($query))
             {
                 echo "<table>
@@ -64,6 +69,11 @@
                                     echo "<li>ID: ".$row[0];
                                     echo "</li>";
                                 echo '</ul>';
+                                echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
@@ -93,6 +103,11 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
+                                echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
@@ -117,6 +132,11 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
+                                echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
@@ -141,6 +161,11 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
+                                echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
@@ -165,6 +190,11 @@
                                     echo "<li>ID: ".$row[1];
                                     echo "</li>";
                                 echo '</ul>';
+                                echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
                 echo       "</td>
                         </tr>
                 </table>";
@@ -195,6 +225,11 @@
                                         echo "<li>ID: ".$row[0];
                                         echo "</li>";
                                     echo '</ul>';
+                                    echo'
+                                        <br>
+                                        <form action="./SesionActiva.php" method="POST">
+                                            <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                        </form>';
                     echo       "</td>
                             </tr>
                     </table>";
@@ -207,12 +242,10 @@
     {
         echo "Editorial de busqueda: ".$editorial;
         echo "<br><br>";
-    }
-    if($autor!="No hay autor")
-    {
-        echo "<h2>Autor de busqueda: </h2>".$autor;
-        echo "<br><br>";
-        $query=mysqli_query($con,"SELECT * FROM Libro WHERE Autor='$autor'");
+        $libro="SELECT * FROM Libro 
+                INNER JOIN Editorial ON Libro.id_editorial=Editorial.id_editorial
+                WHERE Editorial LIKE '%$editorial%'";
+        $query=mysqli_query($con,$libro);
         while($row=mysqli_fetch_array($query))
         {
             echo "<table>
@@ -225,6 +258,38 @@
                                 echo "<li>ID: ".$row[0];
                                 echo "</li>";
                             echo '</ul>';
+                            echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
+            echo       "</td>
+                    </tr>
+            </table>";
+        }
+    }
+    if($autor!="No hay autor")
+    {
+        echo "<h2>Autor de busqueda: </h2>".$autor;
+        echo "<br><br>";
+        $query=mysqli_query($con,"SELECT * FROM Libro WHERE Autor LIKE '%$autor%'");
+        while($row=mysqli_fetch_array($query))
+        {
+            echo "<table>
+                    <tr>
+                        <td>";
+                            echo '<img src="https://img.icons8.com/ios/452/book.png" alt="Default libro" width="100px">';
+                            echo '<ul>';
+                                echo "<li>Titulo: ".$row[3];
+                                echo "</li>";
+                                echo "<li>ID: ".$row[0];
+                                echo "</li>";
+                            echo '</ul>';
+                            echo'
+                                <br>
+                                <form action="./SesionActiva.php" method="POST">
+                                    <input type="submit" value="Mas información" style="background-color:aquamarine">
+                                </form>';
             echo       "</td>
                     </tr>
             </table>";
@@ -234,4 +299,9 @@
     {
         echo "<h2>No hay resultados de busqueda</h2>";
     }
+    /*echo'
+    <br>
+    <form action="./SesionActiva.php" method="POST">
+        <input type="submit" value="Regresar" style="background-color:aquamarine">
+    </form>';*/
 ?>

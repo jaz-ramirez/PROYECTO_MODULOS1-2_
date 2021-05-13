@@ -21,7 +21,7 @@
 
         echo '<form action="./resultadosbusqueda.php" method="POST" align="center">
                 <legend style="color:darkturquoise"><h2><i>Búsqueda</i></h2></legend>
-                <label for="texto">Buscar: 
+                <label for="texto">Buscar (ID o Titulo): 
                     <br>
                     <input type="text" name="texto" style="width: 488px">
                 </label><br><br>
