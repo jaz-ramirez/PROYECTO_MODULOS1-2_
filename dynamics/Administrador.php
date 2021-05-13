@@ -37,8 +37,6 @@
                 rename($archpdf, $carpeta.$book.$extension);
                 echo "<h1>El libro se cargó correctamente en la biblioteca</h1><br><br>";
                 $guardalibro = "INSERT INTO libro (Titulo, Autor, Año) VALUES ('$book', '$autor', '$año')";
-                
-
             }
             else
             {
@@ -46,9 +44,7 @@
             }
         }
         echo "uno";
-
     }
-    
     else if ($maslector!==0)
     {
         if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
