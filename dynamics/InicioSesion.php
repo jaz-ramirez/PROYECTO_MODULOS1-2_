@@ -19,9 +19,9 @@
 
         //header("location: ./SesionActiva.php");
     }
-    echo '<h1 text-aling="center">LA MAGIA DEL SABER</h1>';
-    echo '<h1 text-aling="center">Sapere Aude</h1>';
-    echo '<form action="SesionActiva.php" method="POST" aling="center">
+    echo '<h1 align="center">LA MAGIA DEL SABER</h1>';
+    echo '<h1 align="center">Sapere Aude</h1>';
+    echo '<form action="SesionActiva.php" method="POST" align="center">
             <legend style="color:darkturquoise"><h2><i>Iniciar sesión</i></h2></legend>
             <label for="correo">Correo: 
                 <br>
@@ -36,10 +36,11 @@
     </form>
     <br>
     <hr>
-    ¿No tienes una cuenta?
-    <legend style="color:darkturquoise"><h2><i>¡¡Registrate!!</i></h2></legend>
-    <form action="CrearUser.php" method="post">
-        <input type="submit" name= "Crear" value="Crear Cuenta" style="background-color:aquamarine">
+    <h3 align="center">¿No tienes una cuenta?</h3>
+    
+    <legend style="color:darkturquoise"><h2 align="center"><i>¡¡Registrate!!</i></h2></legend>
+    <form action="CrearUser.php" method="post" align="center">
+        <input type="submit" name= "Crear" value="Crear Cuenta" style="background-color:aquamarine" align="center">
     </form>
     ';
     if(isset($_POST["Acceder"]))
