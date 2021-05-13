@@ -12,13 +12,19 @@
 
     if (!empty($SQL_Row))
     {
-        echo "<h1 align=\"center\">¡¡¡Bienvenido a la biblioteca de la ENP 6!!!</h1>";
+        echo "<h1 align=\"center\">¡¡Bienvenido a la biblioteca de la ENP 6!!</h1>";
         echo '<table align="center">
                 <tbody>
                     <td><video src="../diseño/Biblioteca.mp4" controls Loop width="600" align="center"></td>
                 </tbody>
-        </table>';
-
+                <tr>
+                <h4 align=\'center\'>Bienvenido a <i>La magia del Saber</i> la biblioteca de la ENP 6. <br>
+                Al crear tu cuenta podrás buscar libros a través de su área, su año, su editorial y de su autor.<br>
+                Podrás descargar los libros que sean de tu agrado y también podrás agregarlos a tu lista de favoritos.<br>
+                Si quieres saber algo más sobre un libro podrás consultar su descripción detallada, así como poder ver su portada. 
+                <br><i>Sapere Aude</i></h4>
+                </tr>
+             </table>';
         echo '<form action="./resultadosbusqueda.php" method="POST" align="center">
                 <legend style="color:darkturquoise"><h2><i>Búsqueda</i></h2></legend>
                 <label for="texto">Buscar (ID o Titulo): 
@@ -61,7 +67,13 @@
                 <br><br>
                 <input type="submit" name= "Buscar" value="Buscar" style="background-color:aquamarine">
                 <input type="reset" value="Cancelar" style="background-color:aquamarine">
-                </form>';
+                </form>
+                
+                <h3 align=\'center\'>¿No está el libro que quieres?</h3>
+                <form action="./NuevoMat.php" method="POST" align="center">
+                    <input type="submit" name= "NuevoMat" value="Solicitar Nuevo Material" style="background-color:aquamarine">
+                </form>
+                ';
     }
     else
     {
