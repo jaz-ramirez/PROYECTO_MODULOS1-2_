@@ -21,7 +21,7 @@
     $img= (isset($_POST ["img"])&& $_POST["img"] !="") ?$_POST["img"]: 0;
    
     $correounam = explode ("@", $email);
-    if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
+    echo $email;
     $carpetabiblio= "../statics/";
     if($book!=0)
     {
@@ -44,21 +44,65 @@
                 echo "Este libro ya existe en la biblioteca";
             }
         }
+        echo "uno";
 
     }
-    else if ($maslector!=0)
+    
+    else if ($maslector!==0)
     {
-        $addlector="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) VALUES ('$id',1, '$name', '$birth', '$correo', '$password')";
+        if($correounam[1]==".comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
+        {
+            $addlector="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) 
+                                    VALUES ('$id',1, '$name', '$birth', '$email', '$password')";
+            $query=mysqli_query($conect, $addlector);
+            if($query)
+            {
+                echo "Se ha registrado correctamente";
+            }
+            else{
+                echo "No se pudo registrar correctamente";
+            }
+            echo "<br>dos";  
+        }
+        echo "<br>dos"; 
     }
     else if ($masbiblio!=0)
     {
-        $addlector="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) VALUES ('$id',2, '$name', '$birth', '$correo', '$password')";
+        if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
+        {
+            $addbiblio="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) VALUES ('$id',2, '$name', '$birth', '$correo', '$password')";
+            $query=mysqli_query($conect, $addbiblio);
+            if($query)
+            {
+                echo "Se ha registrado correctamente";
+            }
+            else{
+                echo "No se pudo registrar correctamente";
+            }
+        }
+        echo "tres";
     }
     else if ($masadmin!=0)
     {
-        $addlector="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) VALUES ('$id',3, '$name', '$birth', '$correo', '$password')";
+        if($correounam[1]=="comunidad.unam.mx"||$correounam[1]=="alumno.enp.unam.mx"||$correounam[1]=="enp.unam.mx")
+        {
+            $addadmin="INSERT INTO usuario (id_usuario, id_tipo, Nombre_completo, Fecha_nacimiento, Correo, Contraseña) VALUES ('$id',3, '$name', '$birth', '$correo', '$password')";
+            $query=mysqli_query($conect, $addadmin);
+            if($query)
+            {
+                echo "Se ha registrado correctamente";
+            }
+            else{
+                echo "No se pudo registrar correctamente";
+            }
+        }
+        echo "cuatro";
     }
-   
+    else
+    {
+        echo "no accedió a ninguno";
+    }
+    echo $correounam [1];
 
 
 
