@@ -2,7 +2,7 @@
     define("DBUSER","root");
     define ("DBHOST","localhost");
     define("PASSWORD","");
-    define("DB","biblioteca");
+    define("DB","bibliotecaVirtual");
 
     function connectdb (){
         $conexion=mysqli_connect(DBHOST,DBUSER,PASSWORD,DB);
