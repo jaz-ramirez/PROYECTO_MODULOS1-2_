@@ -19,7 +19,7 @@
                 </tbody>
         </table>';
 
-        echo '<form action="" method="POST" align="center">
+        echo '<form action="./resultadosbusqueda.php" method="POST" align="center">
                 <legend style="color:darkturquoise"><h2><i>Búsqueda</i></h2></legend>
                 <label for="texto">Buscar: 
                     <br>
